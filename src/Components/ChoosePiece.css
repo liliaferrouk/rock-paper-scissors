@@ -1,0 +1,55 @@
+.ChoosePiece-div{
+    width: 98%;
+    aspect-ratio: 1 / 0.9;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.triangle{
+    width: 65%;
+}
+
+.piece-div {
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ChoosePiece-div .piece-div{
+    cursor: pointer;
+}
+
+.piece-div > div{
+    background-color: white;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piece-div img{
+    width: 45%;
+}
+
+.ChoosePiece-div > .div1{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+}
+.ChoosePiece-div > .div2{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+}

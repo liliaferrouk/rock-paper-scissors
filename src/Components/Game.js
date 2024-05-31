@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Game() {
+function Game({youPicked}) {
   return (
-    <div>Game</div>
+    <div>
+      you picked : {youPicked}
+    </div>
   )
 }
 

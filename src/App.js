@@ -17,13 +17,13 @@ function App() {
         showRules ?
         <Rules/> :
         <>
-          <Header/>
+          <Header score={score}/>
           {
             youPicked ?
-            <Game/> :
-            <ChoosePiece/>
+            <Game youPicked={youPicked}/> :
+            <ChoosePiece setYouPicked={setYouPicked}/>
           }
-          <div className="btn-rules">RULES</div>
+          <div className="btn-rules" onClick={()=>{setShowRules(true)}}>RULES</div>
         </>
       }
     </div>
