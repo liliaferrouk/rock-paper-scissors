@@ -1,0 +1,66 @@
+.game-div{
+    height: 60vh;
+    width: 100%;
+}
+
+.game-div .pieces{
+    height: 55%;
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: .5rem;
+    justify-content: space-between;
+}
+
+.une-piece{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.une-piece div{
+    width: 80%;
+}
+
+.une-piece p{
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.piece-vide{
+    background: linear-gradient(to bottom,#1a2946, #192744);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+
+.game-div .result{
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15%;
+}
+
+.result p{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.result .btn-play-again{
+    background-color: white;
+    margin-top: 7px;
+    width: 12rem;
+    height: 2.6rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.5px;
+    color: var(--clr-background-b);
+    font-size: .9rem;
+    font-weight: 600;
+}

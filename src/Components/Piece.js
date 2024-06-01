@@ -13,8 +13,14 @@ function Piece({num,setYouPicked}) {
     'linear-gradient(to bottom, var(--clr-rock-h), var(--clr-rock-b))'
   ];
 
+  const handleClick = () => {
+    if (setYouPicked) {
+      setYouPicked(num);
+    }
+  };
+
   return (
-    <div className='piece-div' style={{ background: gradients[num - 1] }} onClick={()=>setYouPicked(num)}>
+    <div className='piece-div' style={{ background: gradients[num - 1] }} onClick={handleClick}>
       <div>
         <img src={images[num-1]} alt={altTexts[num-1]} />
       </div>
