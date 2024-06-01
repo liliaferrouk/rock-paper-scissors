@@ -1,6 +1,7 @@
 .game-div{
     height: 60vh;
     width: 100%;
+    max-width: 300px;
 }
 
 .game-div .pieces{
@@ -64,4 +65,60 @@
     font-size: .9rem;
     font-weight: 600;
     cursor: pointer;
+}
+
+@media screen and (min-width:1000px) {
+    .game-div{
+        /* background-color: aliceblue; */
+        width: 100%;
+        max-width: none;
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem;
+    }
+
+    .game-div.end-of-game{
+        position: relative;
+    }
+
+    .game-div .pieces{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding:0;
+        /* ici ca change dynamiquement */
+        justify-content: center;
+    }
+
+    .game-div.end-of-game .pieces{
+        justify-content: space-between;
+        padding-inline: 5rem;
+    }
+
+    .une-piece{
+        width: 300px;
+        justify-content: end;
+        position: relative;
+        margin-inline: 1rem;
+    }
+
+    .une-piece p{
+        position: absolute;
+        top: 1rem;
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+    }
+
+    .game-div .result{
+        position: absolute;
+        padding:0;
+        top: 44%;
+        right: 0;
+        left: 0;
+    }
+
+    .result .btn-play-again:hover{
+        color: var(--clr-rock-b);
+        font-weight: 700;
+    }
 }

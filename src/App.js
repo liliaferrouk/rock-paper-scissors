@@ -9,7 +9,7 @@ function App() {
   const [youPicked, setYouPicked]=useState(null) //null
   const [housePicked,setHousePicked]=useState(null)
   const [endOfGame,setEndOfGame]=useState(false) //false
-  const [score,setScore]=useState(0)
+  const [score,setScore]=useState(0)//0
 
   useEffect(()=>{
     if(youPicked){
@@ -23,15 +23,18 @@ function App() {
 
   useEffect(()=>{
     if(housePicked){
-      setEndOfGame(true)
-      const rules = {
-        1: { beats: 3 }, // Rock beats Scissors
-        2: { beats: 1 }, // Paper beats Rock
-        3: { beats: 2 }, // Scissors beats Paper
-      };
-      if (rules[youPicked].beats === housePicked) {
-        setScore(prev=>prev+1)
-      }
+      const timeoutId = setTimeout(()=>{
+        setEndOfGame(true)
+        const rules = {
+          1: { beats: 3 }, // Rock beats Scissors
+          2: { beats: 1 }, // Paper beats Rock
+          3: { beats: 2 }, // Scissors beats Paper
+        };
+        if (rules[youPicked].beats === housePicked) {
+          setScore(prev=>prev+1)
+        }
+      },400)
+      return () => clearTimeout(timeoutId);
     }
   },[housePicked,youPicked])
 

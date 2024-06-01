@@ -127,3 +127,15 @@ main{
   align-items: center;
   cursor: pointer;
 }
+
+@media screen and (min-width:1000px) {
+  .App{
+    padding: 2.5rem;
+    padding-bottom:2rem;
+    padding-inline: 1.6rem;
+  }
+  .btn-rules{
+    align-self: flex-end;
+    border-radius: 7px;
+  }
+}

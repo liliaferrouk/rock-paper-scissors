@@ -6,9 +6,11 @@ import img_close from '../images/icon-close.svg'
 function Rules({setShowRules}) {
   return (
     <div className='rules-div'>
-      <p>RULES</p>
-      <img src={img_rules} alt="rules" />
-      <img onClick={()=>{setShowRules(false)}} src={img_close} alt="close icon" />
+      <div>
+        <p>RULES</p>
+        <img src={img_rules} alt="rules" />
+        <img onClick={()=>{setShowRules(false)}} src={img_close} alt="close icon" />
+      </div>
     </div>
   )
 }

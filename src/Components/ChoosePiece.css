@@ -1,5 +1,6 @@
 .ChoosePiece-div{
     width: 98%;
+    max-width: 300px;
     aspect-ratio: 1 / 0.9;
     margin-bottom: 2rem;
     display: flex;
@@ -52,4 +53,13 @@
     display: flex;
     justify-content: center;
     bottom: 0;
+}
+
+@media screen and (min-width:1000px) {
+    .ChoosePiece-div{
+        max-width:500px;
+        width: 30%;
+        position: relative;
+        top: 3rem;
+    }
 }

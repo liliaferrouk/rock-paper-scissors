@@ -22,7 +22,7 @@ function Game({youPicked,housePicked,endOfGame,newPartie}) {
   }
 
   return (
-    <div className='game-div'>
+    <div className={`game-div ${endOfGame ? 'end-of-game':''}`}>
       <div className='pieces'>
         <div className='une-piece'>
           <Piece num={youPicked}/>
