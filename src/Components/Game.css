@@ -63,4 +63,5 @@
     color: var(--clr-background-b);
     font-size: .9rem;
     font-weight: 600;
+    cursor: pointer;
 }

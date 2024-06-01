@@ -1,0 +1,29 @@
+.rules-div{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: var(--clr-dark-txt);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4.7rem;
+    padding-bottom: 3.5rem;
+}
+
+.rules-div p{
+    font-size: 1.7rem;
+    font-weight: 650;
+}
+
+.rules-div img:first-of-type{
+    width: 260px;
+    margin-bottom: 2rem;
+}
+
+.rules-div img:last-of-type{
+    width: 18px;
+    cursor: pointer;
+}

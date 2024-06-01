@@ -5,7 +5,7 @@ import Game from "./Components/Game";
 import ChoosePiece from "./Components/ChoosePiece";
 
 function App() {
-  const [showRules,setShowRules]=useState(false)
+  const [showRules,setShowRules]=useState(false)//false
   const [youPicked, setYouPicked]=useState(null) //null
   const [housePicked,setHousePicked]=useState(null)
   const [endOfGame,setEndOfGame]=useState(false) //false
@@ -33,7 +33,7 @@ function App() {
         setScore(prev=>prev+1)
       }
     }
-  },[housePicked])
+  },[housePicked,youPicked])
 
   function newPartie(){
     setYouPicked(null)
@@ -43,10 +43,6 @@ function App() {
 
   return (
     <div className="App">
-      {
-        showRules ?
-        <Rules/> :
-        <>
           <Header score={score}/>
           {
             youPicked ?
@@ -54,8 +50,7 @@ function App() {
             <ChoosePiece setYouPicked={setYouPicked}/>
           }
           <div className="btn-rules" onClick={()=>{setShowRules(true)}}>RULES</div>
-        </>
-      }
+          {showRules && <Rules setShowRules={setShowRules}/>}
     </div>
   );
 }

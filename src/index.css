@@ -110,6 +110,7 @@ main{
   align-items: center;
   padding: 1.5rem;
   padding-bottom: 3.1rem;
+  position: relative;
 }
 
 .btn-rules{
